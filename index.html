@@ -3,9 +3,9 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Happy Anniversary, Ashley</title>
+  <title>To My Forever Valentine, Ashley</title>
   <style>
-    @import url('https://fonts.googleapis.com/css2?family=Great+Vibes&family=Georgia&display=swap');
+    @import url('https://fonts.googleapis.com/css2?family=Great+Vibes&family=Dancing+Script:wght@600&family=Georgia&display=swap');
 
     * {
       box-sizing: border-box;
@@ -14,14 +14,13 @@
     }
 
     body {
-      font-family: 'Georgia', serif;
-      background: url('IMG_20250217_102906_390.jpg') no-repeat center center fixed;
+      font-family: 'Georgia', serif; 
+      background: #020c1b url('IMG_20250217_102906_390.jpg') no-repeat center center fixed;
       background-size: cover;
       color: #fff;
       min-height: 100vh;
-      overflow-y: auto;
+      overflow-x: hidden;
       padding: 20px;
-      position: relative;
     }
 
     .overlay {
@@ -30,151 +29,196 @@
       left: 0;
       width: 100%;
       height: 100%;
-      background: rgba(0, 0, 0, 0.6);
+      background: linear-gradient(135deg, rgba(0, 10, 30, 0.85), rgba(0, 40, 80, 0.7));
       z-index: 0;
+    }
+
+    .hearts-container {
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      pointer-events: none;
+      z-index: 1;
+    }
+
+    .heart {
+      position: absolute;
+      color: #add8e6;
+      font-size: 20px;
+      animation: float 6s linear infinite;
+      opacity: 0;
+      text-shadow: 0 0 5px #fff;
+    }
+
+    @keyframes float {
+      0% { transform: translateY(100vh) rotate(0deg); opacity: 1; }
+      100% { transform: translateY(-10vh) rotate(360deg); opacity: 0; }
     }
 
     .content {
       position: relative;
-      z-index: 1;
-      background-color: rgba(0, 0, 0, 0.5);
-      padding: 30px;
-      border-radius: 15px;
-      max-width: 850px;
-      margin: auto;
+      z-index: 2;
+      background-color: rgba(0, 15, 40, 0.75);
+      padding: 45px 30px;
+      border-radius: 30px;
+      max-width: 800px;
+      margin: 40px auto;
       text-align: center;
-      animation: fadeIn 2s ease forwards;
-      opacity: 0;
+      box-shadow: 0 0 40px rgba(0, 191, 255, 0.4);
+      border: 1px solid rgba(173, 216, 230, 0.2);
+      animation: fadeIn 2.5s ease forwards;
     }
 
     h1 {
-      font-family: 'Great Vibes', cursive;
-      font-size: 3em;
-      color: #ffcce5;
-      margin-bottom: 20px;
+      font-family: 'Great Vibes', cursive; 
+      font-size: 4.5em;
+      color: #e0f7fa;
+      margin-bottom: 15px;
+      text-shadow: 2px 2px 10px rgba(0, 191, 255, 0.5);
     }
 
     h2 {
-      color: pink;
-      margin: 20px 0;
-      font-size: 1.5em;
-      line-height: 1.7;
+      font-family: 'Dancing Script', cursive;
+      color: #87cefa;
+      margin: 25px 0;
+      font-size: 2em;
+      line-height: 1.5;
     }
 
     p {
-      color: lightblue;
-      font-size: 1.1em;
-      line-height: 1.8;
-      margin: 18px 0;
-    }
-
-    a {
-      color: #ffb6c1;
-      text-decoration: underline;
+      color: #f0f8ff;
+      font-size: 1.25em;
+      line-height: 2;
+      margin: 22px 0;
+      font-weight: 300;
+      text-align: left;
     }
 
     img {
       width: 100%;
-      max-width: 320px;
-      border-radius: 10px;
-      margin: 20px 0;
-      box-shadow: 0 4px 15px rgba(255, 255, 255, 0.3);
+      max-width: 500px;
+      border-radius: 20px;
+      margin: 30px auto;
+      display: block;
+      box-shadow: 0 8px 25px rgba(0, 0, 0, 0.6);
+      border: 2px solid rgba(173, 216, 230, 0.3);
+    }
+
+    /* YouTube Responsive Wrapper */
+    .video-container {
+      position: relative;
+      padding-bottom: 56.25%;
+      height: 0;
+      overflow: hidden;
+      max-width: 100%;
+      background: #000;
+      border-radius: 20px;
+      margin: 35px 0;
+      box-shadow: 0 10px 30px rgba(0,0,0,0.5);
+    }
+
+    .video-container iframe {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      border: 0;
     }
 
     .footer {
-      margin-top: 40px;
-      font-style: italic;
-      color: #ffd6e7;
-      font-size: 1.2em;
+      margin-top: 50px;
+      font-family: 'Great Vibes', cursive;
+      font-size: 2.8em;
+      color: #add8e6;
     }
 
     @keyframes fadeIn {
-      to {
-        opacity: 1;
-      }
+      from { opacity: 0; transform: translateY(20px); }
+      to { opacity: 1; transform: translateY(0); }
     }
 
     @media (max-width: 480px) {
-      h1 {
-        font-size: 2.3em;
-      }
-
-      h2 {
-        font-size: 1.2em;
-      }
-
-      p {
-        font-size: 1em;
-      }
+      h1 { font-size: 3em; }
+      h2 { font-size: 1.6em; }
+      .content { padding: 25px; }
     }
   </style>
 </head>
 <body>
   <div class="overlay"></div>
+  <div class="hearts-container" id="hearts"></div>
 
-  <!-- Background Music -->
-  <audio autoplay loop>
-    <source src="https://www.bensound.com/bensound-music/bensound-romantic.mp3" type="audio/mpeg">
-    Your browser does not support the audio element.
+  <audio autoplay loop id="myAudio">
+    <source src="https://www.chosic.com/wp-content/uploads/2021/04/Rainy-Day-Piano-Version.mp3" type="audio/mpeg">
   </audio>
 
   <div class="content">
-    <!-- First Image: Title -->
-    <img src="IMG_20250802_065259_089.jpg" alt="Happy Anniversary Image" />
+    <img src="IMG_20250802_065259_089.jpg" alt="Our Love" />
 
-    <h1>Happy 1st Anniversary, Ashley</h1>
+    <h1>To My Valentine, Ashley</h1>
 
-    <!-- Second Image: One Year of Us -->
-    <img src="IMG_20250217_102902_726.jpg" alt="One Year of Us" />
+    <img src="IMG_20250217_102902_726.jpg" alt="You and Me" />
     <h2>
-      My beautiful Ashley,<br>
-      Today marks one full year of us — 365 days of laughter, love, growth, and unforgettable moments. And even after all this time, every time I see you, it still feels like the very first day my heart found its home.
+      My dearest Ashley,<br>
+      "If I had a flower for every time I thought of you... I could walk through my garden forever."
     </h2>
 
-    <!-- Third Image: The Smile -->
+    <img src="IMG_20250810_104741_209.jpg" alt="New Memory 1" />
+
+    <p>
+      There’s a specific kind of magic in the way you look at me. It’s the kind of warmth that can turn a bad day around in a heartbeat. You aren't just my partner; you’re the person I want to tell everything to, the one I want to share every sunset with, and the heart I want to protect forever. Thank you for being my constant in an ever-changing world.
+    </p>
+
+    <div class="video-container">
+      <iframe src="https://www.youtube.com/embed/2Vv-BfVoq4g" title="Romantic Valentine Video" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+    </div>
+
     <img src="IMG_20250319_013052_767.jpg" alt="The Smile" />
     <p>
-      There’s something magical about the way you smile at me. It’s not just a look — it’s a feeling. It’s warmth, comfort, excitement, and peace all wrapped into one. You’ve shown me that love isn’t just about passion — it’s about patience, understanding, and choosing one another every single day. And I choose you, Ashley, again and again, without hesitation.
+      Thank you for your patience, for the way you listen when I’m rambling, and for loving me even in the moments when I’m not the easiest to love. Being with you has taught me that love isn’t about being perfect—it’s about being real, being kind, and being <i>home</i> for one another. 
     </p>
 
-    <!-- Fourth Image: Patience and Understanding -->
-    <img src="IMG_20250810_101641_547.jpg" alt="Patience and Understanding" />
+    <img src="IMG_20250810_103733_987.jpg" alt="New Memory 2" />
+
     <p>
-      I remember our late-night talks, the way we laugh over the smallest things, and how just being near you makes the world feel calm. I’ve learned more about love from you than I ever thought possible. You love with your whole heart — purely, deeply, and fiercely — and I’m so lucky that I’m the one you love.
+      You are my biggest inspiration. Seeing your strength and your heart makes me want to be the best version of myself, not just for me, but for us. Every day with you feels like a gift I never expected but always dreamed of. I’m so incredibly lucky to be the one walking through life by your side.
     </p>
 
-    <!-- Fifth Image: Supporting and Inspiring -->
-    <img src="IMG_20250810_101748_786.jpg" alt="Supporting and Inspiring" />
+    <img src="IMG_20250810_101724_989.jpg" alt="Music" />
     <p>
-      You’ve supported me when I doubted myself. You’ve inspired me to be better. You’ve held my hand when I was unsure, and you’ve reminded me who I am when I forgot. You’ve brought out a version of me that I’m proud of — and I owe that to your faith in me and your endless love.
+      Whenever I hear this song, it feels like it was written about us. It captures all the things I sometimes struggle to put into words.<br>
+      <a href="https://music.youtube.com/watch?v=6pQcD3xKAtA&si=VYg77GNTMlkZoInq" target="_blank">Listen to our song ❤️</a>
     </p>
 
-    <!-- Sixth Image: Favorite Person and Home -->
-    <img src="IMG_20250810_101752_176.jpg" alt="Favorite Person" />
+    <img src="IMG_20250810_101632_180.jpg" alt="Together" />
     <p>
-      I want you to know that you are my favorite person in this world. My safe space. My home. My reason to smile every morning and my comfort every night. If I could pause time, I would freeze every moment I get to spend with you — but since I can't, I’ll keep cherishing every second we're together.
+      Happy Valentine’s Day, my love. Thank you for being you. I can’t wait for all the memories we haven't made yet. You are my today and all of my tomorrows.
     </p>
 
-    <!-- Seventh Image: The Song -->
-    <img src="IMG_20250810_101724_989.jpg" alt="The Song" />
-    <p>
-      I came across this song that made me think of us — our moments, our journey, our future. It’s soft, full of feeling, and perfectly captures everything I feel inside.<br>
-      <a href="https://music.youtube.com/watch?v=6pQcD3xKAtA&si=VYg77GNTMlkZoInq" target="_blank">Click here to listen</a>
-    </p>
-
-    <!-- Eighth Image: Future Together -->
-    <img src="IMG_20250810_103733_987.jpg" alt="Future Together" />
-    <p>
-      Happy anniversary, my love. I can’t wait to see where life takes us next. Through every challenge, every joy, and everything in between — I’ll be right by your side, holding your hand, loving you more each day.
-    </p>
-
-    <!-- Ninth Image: The Final Toast -->
-    <img src="IMG_20250810_101632_180.jpg" alt="Final Toast" />
-    <p>
-      Here’s to one year of us. And to many more ahead. 💖
-    </p>
-
-    <div class="footer">— Forever and always, lovelove</div>
+    <div class="footer">Forever and always yours, lovelove</div>
   </div>
+
+  <script>
+    function createHeart() {
+      const heart = document.createElement('div');
+      heart.classList.add('heart');
+      const icons = ['💙', '💎', '✨', '❄️'];
+      heart.innerHTML = icons[Math.floor(Math.random() * icons.length)];
+      heart.style.left = Math.random() * 100 + 'vw';
+      heart.style.animationDuration = Math.random() * 3 + 4 + 's';
+      heart.style.fontSize = Math.random() * 15 + 10 + 'px';
+      document.getElementById('hearts').appendChild(heart);
+      setTimeout(() => { heart.remove(); }, 7000);
+    }
+    setInterval(createHeart, 400);
+
+    // Audio helper for modern browsers
+    window.addEventListener('click', () => {
+        document.getElementById('myAudio').play();
+    }, { once: true });
+  </script>
 </body>
 </html>
